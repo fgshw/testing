@@ -1,0 +1,145 @@
+/* รีเซ็ต margin/padding ของ body และ html */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw; /* ความกว้างเต็มหน้าจอ */
+}
+
+/* สไตล์สำหรับ navbar */
+.navbar {
+  background-color: #333; /* สีพื้นหลัง */
+  color: rgb(255, 255, 255); /* สีตัวอักษร */
+  padding: 20px 50px; /* เพิ่ม padding เพื่อให้ดูสมดุล */
+  font-family: Arial, Helvetica, sans-serif; /* ฟอนต์ */
+  width: 100vw; /* ความกว้างเต็มหน้าจอ */
+  box-sizing: border-box; /* รวม padding ในขนาด */
+  margin: 0; /* ไม่มี margin */
+  position: relative; /* ถ้าไม่ต้องการให้ navbar ติดตามเมื่อเลื่อน */
+}
+
+/* ถ้าต้องการให้ navbar ติดอยู่ด้านบนเมื่อเลื่อน ใช้แบบนี้แทน */
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* ป้องกันไม่ให้เนื้อหาถูกปิด */
+}
+
+/* Container สำหรับ Navbar */
+.navbar-container {
+  display: flex; /* ใช้ flexbox */
+  justify-content: space-between; /* จัดให้มีพื้นที่ระหว่างซ้ายขวา */
+  align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+  width: 100%; /* ความกว้างเต็ม */
+  max-width: 1400px; /* ขยายขนาดความกว้างสูงสุดเพื่อให้ดูไม่แคบเกินไป */
+  margin: 0 auto; /* กึ่งกลาง */
+}
+
+/* สไตล์สำหรับ logo */
+.navbar-logo {
+  font-size: 1.7rem; /* ขนาดฟอนต์ของโลโก้ */
+  font-weight: bold; /* หนักของฟอนต์ */
+  color: rgb(255, 255, 255); /* เปลี่ยนสีของโลโก้เป็นสีขาว */
+}
+
+/* สไตล์สำหรับรายการลิงค์ */
+.navbar-links {
+  display: flex; /* ใช้ flexbox */
+  align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+  gap: 2rem; /* ระยะห่างระหว่างลิงค์มากขึ้น */
+}
+
+/* สไตล์สำหรับลิงค์ */
+.navbar-button {
+  color: rgb(255, 255, 255); /* เปลี่ยนสีของลิงค์เป็นสีขาว */
+  text-decoration: none; /* ไม่มีเส้นใต้ */
+  font-weight: bold; /* หนักของฟอนต์ */
+  padding: 10px 15px; /* เพิ่ม padding ให้ปุ่มดูมีพื้นที่ */
+  transition: background-color 0.3s; /* เพิ่มความสวยงามเมื่อเลื่อนเมาส์ */
+  border-radius: 5px; /* มุมโค้ง */
+}
+
+/* เมื่อ hover ลิงค์ */
+.navbar-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* แสดงสีพื้นหลังเมื่อ hover */
+}
+
+/* สไตล์สำหรับชื่อผู้ใช้ใน Navbar */
+.navbar-username {
+  color: white;
+  cursor: pointer;
+  position: relative; /* เพิ่ม position */
+}
+
+/* สไตล์สำหรับเมนู dropdown */
+.dropdown-menu {
+  display: none; /* เริ่มต้นซ่อน */
+  position: absolute;
+  background-color: #333; /* สีพื้นหลังของเมนู dropdown */
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  right: 0; /* ชิดขวา */
+  z-index: 1000; /* ป้องกันไม่ให้ปุ่มอยู่ใต้เนื้อหา */
+}
+
+/* แสดงเมนู dropdown เมื่อ hover */
+.navbar-username:hover .dropdown-menu {
+  display: block; /* แสดงเมื่อ hover */
+}
+
+/* สไตล์สำหรับปุ่ม Logout */
+.dropdown-menu button {
+  background-color: #AE3A3A; /* สีพื้นหลังของปุ่ม Logout */
+  color: white; /* สีของข้อความ */
+  border: none; /* ลบกรอบ */
+  padding: 10px 15px; /* ขนาด padding ของปุ่ม */
+  cursor: pointer; /* แสดง cursor เป็นมือเมื่อ hover */
+  border-radius: 5px; /* เพิ่มความมนให้กับมุม */
+  transition: background-color 0.3s; /* เพิ่มความสวยงามเมื่อเลื่อนเมาส์ */
+}
+
+/* สีเมื่อ hover บนปุ่ม Logout */
+.dropdown-menu button:hover {
+  background-color: #A52A2A; /* สีเมื่อ hover */
+}
+
+/* สไตล์สำหรับฟอร์ม Login */
+.login-form {
+  background-color: #f9f9f9; /* สีพื้นหลังของฟอร์ม */
+  padding: 20px; /* ขนาด padding ของฟอร์ม */
+  border-radius: 5px; /* ความมนให้กับมุม */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เงา */
+}
+
+/* สไตล์สำหรับข้อความแสดงข้อผิดพลาด */
+.error {
+  color: red; /* สีข้อความแสดงข้อผิดพลาด */
+}
+
+/* สไตล์สำหรับช่องกรอกข้อมูล */
+.nameemail,
+.namepassword {
+  margin: 10px 0; /* ระยะห่าง */
+  padding: 10px; /* ขนาด padding */
+  border: 1px solid #ccc; /* ขอบ */
+  border-radius: 5px; /* ความมนให้กับมุม */
+  width: 100%; /* ความกว้างเต็ม */
+}
+
+/* สไตล์สำหรับปุ่ม Login */
+.log-in {
+  background-color: #0070f3; /* สีพื้นหลังของปุ่ม Login */
+  color: white; /* สีของข้อความ */
+  padding: 10px; /* ขนาด padding */
+  border: none; /* ลบกรอบ */
+  border-radius: 5px; /* ความมนให้กับมุม */
+  cursor: pointer; /* แสดง cursor เป็นมือเมื่อ hover */
+}
+
+/* สไตล์สำหรับลิงค์ Register */
+.register-link {
+  color: #0070f3; /* สีของลิงค์ Register */
+  text-decoration: underline; /* ขีดเส้นใต้ */
+}

@@ -1,0 +1,88 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    position: relative;
+    height: 91vh;
+    background-image: url('1341443.png'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #f4b44b; /* Similar color to the example */
+}
+
+p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fffdfd;
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #f4b44b; /* Similar to the button in the example */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Make sure any anchor tag inside the button does not have an underline */
+.cta-button a {
+    text-decoration: none; /* Explicitly remove underline from the link */
+    color: inherit; /* Keep the color same as the button */
+}
+
+.cta-button:hover {
+    background-color: #e09e35; /* Darken on hover */
+}
+
+
+/* เมื่อผู้ใช้ล็อกอิน ให้แสดงปุ่ม Logout */
+.navbar-username {
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-username:hover .dropdown-menu {
+  display: block;
+}
+

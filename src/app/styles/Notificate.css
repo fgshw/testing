@@ -1,0 +1,73 @@
+.calendar-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .calendar-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .calendar-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .calendar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .calendar-item:last-child {
+    border-bottom: none;
+  }
+  
+  .calendar-icon {
+    color: #f4b44b; /* สีไอคอนของอีเว้นท์ */
+    font-size: 2rem;
+    margin-right: 15px;
+  }
+  
+  .calendar-content {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  
+  .calendar-event-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .calendar-event-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .calendar-notification {
+    display: flex;
+    align-items: center;
+    color: #b02a2a;
+  }
+  
+  .calendar-notification svg {
+    font-size: 1.2rem;
+    margin-right: 5px;
+  }
+  
+  .calendar-notification span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
